@@ -17,6 +17,11 @@ class Test
         }
     }
 
+    public function getTransformedData()
+    {
+        return $this->transformed_data;
+    }
+
     public function getXML(){
 
         $dom = new \DOMDocument();
