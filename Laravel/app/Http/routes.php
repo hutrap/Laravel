@@ -19,8 +19,10 @@ Route::get('/Comment', function() {
 // Does not work for 5
 //    View::make('comment'); // will return app/views/index.php
     return view('comment');
-
 });
+
+Route::get('/Test/xml', 'TestController@getXml');
+Route::get('/Test/json', 'TestController@getJson');
 
 
 // API ROUTES ==================================
