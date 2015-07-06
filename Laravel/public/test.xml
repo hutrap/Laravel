@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sales>
+    <sale>
+        <datetime>2009-12-30 15:57:00</datetime>
+        <amount>3.37</amount>
+        <orderRef>LVW6622</orderRef>
+        <affiliate>14325</affiliate>
+    </sale>
+</sales>

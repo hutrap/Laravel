@@ -44,7 +44,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">My 11111  Home Laravel project  Laravel 5</div>
+                <div class="title">My  PB Home Laravel project  Laravel 5</div>
                 <div class="quote">{{ Inspiring::quote() }}</div>
             </div>
         </div>

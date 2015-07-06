@@ -6,6 +6,7 @@ class Test
 {
 
     private $transformed_data = array();
+    private $dom;
 
     public function __construct(array $data=null){
         if(!$data){
@@ -20,7 +21,6 @@ class Test
     {
         return $this->transformed_data;
     }
-    
 
     public function getXML(){
 
