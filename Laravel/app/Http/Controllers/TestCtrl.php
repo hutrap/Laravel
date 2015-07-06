@@ -1,21 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Model\Test;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
 class TestController extends Controller{
 
-    public function getXML(){
-        $test_model = new Test();
-        return $test_model->getXML();;
-    }
 
+    public function getResult(){
 
-    public function getJson(){
-
-    return $this->transformXML("data.xml", "output.txt");
+        return $this->transformXML("data.xml", "output.txt");
 
     }
 
@@ -40,10 +34,10 @@ class TestController extends Controller{
         while ($reader->read()):
             if ($reader->nodeType == \XMLReader::ELEMENT && $reader->name == 'sale'){
                 $node = new \SimpleXMLElement($reader->readOuterXML());
-//TODO  Data should be validated in this point and rice an exception if error
+//TODO  Node data should be validated in this point and rice an exception if error
                 $commission = round(bcdiv($node->amount, '100', 4)*5,2,PHP_ROUND_HALF_UP)+0.5;
                 $date = Carbon::parse($node->datetime)->timestamp;
-// TODO Not nice. HAve to create a separate method for string generation
+// TODO Not nice. Have to create a separate method for string generation
                 $line = $node->affiliate."|".$node->amount.'|'.$commission.'|'.$date.'|"'.$node->orderRef.'"'.PHP_EOL;
                 if(app()->runningUnitTests()){
                     return $line;

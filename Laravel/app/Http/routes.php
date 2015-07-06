@@ -21,6 +21,13 @@ Route::get('/Comment', function() {
     return view('comment');
 });
 
+Route::get('/RotaSlot', function() {
+// Does not work for 5
+//    View::make('comment'); // will return app/views/index.php
+    return view('rotaSlotStaff');
+});
+
+
 Route::get('/Test/xml', 'TestController@getXml');
 Route::get('/Test/json', 'TestController@getJson');
 
@@ -33,6 +40,9 @@ Route::group(array('prefix' => 'api'), function() {
     // this ensures that a user can't access api/create or api/edit when there's nothing there
     Route::resource('comments', 'CommentController',
         array('only' => array('index', 'store', 'destroy')));
+
+    Route::resource('rotaSlot', 'RotaSlotStaffController',
+        array('only' => array('index')));
 
 });
 

@@ -5,6 +5,8 @@ angular.module('commentService', [])
         return {
             // get all the comments
             get : function() {
+                console.log($http.get('/api/rotaSlot'));
+
                 return $http.get('/api/comments');
             },
 
