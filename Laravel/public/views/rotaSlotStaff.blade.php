@@ -31,11 +31,18 @@
 
     <!-- THE COMMENTS =============================================== -->
     <!-- hide these comments if the loading variable is true -->
-    <div class="rota-slot-report" ng-hide="loading" ng-repeat="rotaSlot in rotaSlots">
-        <h3>Comment #@{{ rotaSlot.id }}! <small>by @{{ rotaSlot.rota_id }}!</h3>
-        <p>@{{ comment.text }}!</p>
+    <table class="table table-striped table-hover" width="100%">
+        <tr>
+            <th>Id</th>
+            <th>Rota id</th>
+            <th></td>
+        </tr>
+        <tr ng-repeat="rotaSlot in rotaSlots">
+            <td>@{{ rotaSlot.id  }}</td>
+            <td>@{{ rotaSlot.rota_id  }}</td>
+        </tr>
+    </table>
 
-    </div>
 
 </div>
 </body>
