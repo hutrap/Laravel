@@ -6,7 +6,6 @@
     <style>
         body        { padding-top:30px; }
         form        { padding-bottom:20px; }
-        .comment    { padding-bottom:20px; }
     </style>
 
     <!-- JS -->
@@ -24,11 +23,8 @@
 
 <div class="col-md-8 col-md-offset-2">
 
-    <!-- show loading icon if the loading variable is set to true -->
     <p class="text-center" ng-show="loading"><span class="fa fa-meh-o fa-5x fa-spin"></span></p>
 
-    <!-- THE COMMENTS =============================================== -->
-    <!-- hide these comments if the loading variable is true -->
     <table class="table table-striped table-hover" width="100%">
         <tr>
             <th rowspan="2">Staff Id</th><th colspan="7">Days</td><th rowspan="2">Total hours</th>
