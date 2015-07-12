@@ -17,7 +17,7 @@ class RotaSlotStaffController extends Controller
      */
     public function index()
     {
-        return \Response::json(RotaSlotStaff::get());
+        return \Response::json(RotaSlotStaff::getReport());
         //
     }
 
